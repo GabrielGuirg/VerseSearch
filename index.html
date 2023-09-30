@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bible Verse Search</title>
+    <link rel="stylesheet" type="text/css" href="styling.css">
+</head>
+<body>
+    <div class="center">
+        <div class="box">
+            <form id="searchForm">
+                <h1>Father give me a word to live by</h1>
+                <label for="searchWord">Enter a word:</label>
+                <input type="text" id="searchWord" placeholder="e.g., God">
+                <button id="searchButton">Search</button>
+                <div id="result"></div>
+            </form>
+        </div>
+    </div>
+</div>
+        <script src="bible.js"></script>
+        <script>
+            // Prevent the default form submission behavior
+            document.getElementById('searchForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                // Perform your search and display the result here
+                // You can use AJAX or other techniques to fetch and display data
+            });
+        </script>
+</body>
+</html>

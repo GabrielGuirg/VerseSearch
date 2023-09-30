@@ -1,0 +1,72 @@
+body {
+    background-color: white;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Center vertically in viewport */
+}
+
+.box {
+    width: 370px;
+    height: 450px;
+    background: black;
+    border-radius: 50px 5px;
+    overflow: hidden;
+    text-align: center; /* Center-align text inside the box */
+    position: relative;
+    color:white
+}
+
+/* Rest of your CSS for .box remains unchanged */
+
+.box::before {
+    content: '';
+    position: absolute;
+    top:-50%;
+    left: -50;
+    width: 370px;
+    height: 450px;
+    background: linear-gradient(60deg,transparent,orange, orange);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    top:-50%;
+    left: -50;
+    width: 370px;
+    height: 450px;
+    background: linear-gradient(60deg,transparent,#d9138a,#d9138a);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+form {
+    position: absolute;
+    inset: 2px;
+    border-radius: 50px 5px;
+    background: black;
+    z-index: 10; 
+    padding: 30px 30px;
+    display: flex;
+    flex-direction: column;
+}
+
